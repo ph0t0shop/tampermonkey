@@ -222,7 +222,7 @@ function navigateLogTo(index) { // assumption: replay window exists
         iFrame.contentWindow.HTMLScriptElement.prototype.setAttribute = function(name, value) {
             console.log(`HTMLScriptElement#setAttribute("${name}", "${value}");`);
             if (name === "src" && value.startsWith("https://data.typeracer.com/textstats")) {
-                console.log("Text ID: " + value.match(/textId=(\d+)&/)[1]);
+                alert("Text ID: " + value.match(/textId=(\d+)&/)[1]);
             }
             return this.oldSA(name, value);
         }
